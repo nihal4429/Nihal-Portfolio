@@ -1,0 +1,516 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    background-color: #6d346c63;
+    color: #8220b4;
+
+    padding: 20px;
+    align-items: center;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    background-color: #78653cab;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style sections */
+section {
+    padding: 20px;
+}
+
+/* Style projects in the portfolio section */
+.project {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+
+
+}
+
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #701b30;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+
+}
+
+h2 {
+    color: cyan;
+    margin-left: 47%;
+}
+
+.profile-image {
+    position: absolute;
+    top: 135px;
+    /* Adjust this value to your desired top position */
+    right: 20px;
+    /* Adjust this value to your desired right position */
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: black;
+    /* Set background color to match your page's background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img.profile-image-circle {
+    width: 100%;
+    height: 70%;
+    display: block;
+}
+
+#about {
+    color: #2d6ec6;
+    text-align: left;
+    width: 60%;
+}
+
+#contact {
+    color: #ffffff;
+    width: 27%;
+}
+
+.bubble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+    animation: moveBubble 20s linear infinite, changeColor 2s linear infinite;
+    cursor: pointer;
+    left: 89%;
+    transform: translateX(-50%);
+    bottom: -100px;
+    /* Adjust this value to control the initial position of the bubbles */
+    z-index: 1;
+}
+
+.bubble:nth-child(2) {
+    background-color: rgba(0, 255, 0, 0.5);
+    animation-delay: 5s;
+    left: 50%;
+}
+
+.bubble:nth-child(3) {
+    background-color: rgba(255, 0, 0, 0.5);
+    animation-delay: 10s;
+    left: 5%;
+}
+
+@keyframes moveBubble {
+    0% {
+        transform: translateY(100%);
+        bottom: -100px;
+        /* Adjust this value to control the initial position of the bubbles */
+    }
+
+    100% {
+        transform: translateY(-100%);
+        bottom: calc(100vh + 100px);
+        /* Adjust this value to determine how high the bubbles will go */
+    }
+}
+
+@keyframes changeColor {
+
+    0%,
+    100% {
+        background-color: rgba(0, 0, 255, 0.5);
+    }
+
+    25% {
+        background-color: rgba(0, 255, 0, 0.5);
+    }
+
+    50% {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    75% {
+        background-color: rgba(0, 0, 255, 0.5);
+    }
+}
+
+.bubble a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.descp {
+    color: #ffffff;
+    text-align: center;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: opacity 0.5s, font-size 0.5s;
+    /* Add transition for opacity and font-size */
+
+    color: #701b30;
+    font-size: 54px;
+    /* Initial font size */
+    opacity: 1;
+    text-align: center;
+    /* Initial opacity */
+}
+
+#loading-text {
+    font-size: 54px;
+    /* Larger font size for when the text appears */
+    opacity: 0;
+    /* Initially set to be invisible */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.hover07 figure img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+
+}
+
+.hover07 figure:hover img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+
+}
+
+.hover07 .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* To hide any part of the image that exceeds the container */
+    position: relative;
+    height: 200px;
+    /* Set the desired height for the container */
+}
+
+
+/* Add this to your existing styles.css or create a new CSS file */
+
+
+.hamburger-menu {
+    display: flex;
+    align-items: left;
+
+}
+
+.menu-icon {
+    cursor: pointer;
+    margin-right: 20px;
+    /* Adjust spacing as needed */
+
+
+}
+
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+
+}
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Adjust the distance from the header as needed */
+    right: 1350px;
+    /* Adjust the distance from the header as needed */
+    background-color: #333;
+    /* Background color for the menu */
+    border: 1px solid #555;
+    /* Add a border for better visibility */
+    border-radius: 5px;
+    width: 150px;
+
+}
+
+.menu-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    background-color: #555;
+    /* Background color on hover */
+}
+
+/* Show menu links when menu icon is clicked */
+.hamburger-menu.active .menu-links {
+    display: flex;
+}
+
+/* Adjust styles for the Achievements section */
+.achievements {
+    display: flex;
+    align-items: left;
+    margin-right: 1000px;
+    /* Adjust spacing as needed */
+    color: white;
+    /* Text color for Achievements */
+    padding-left: 5px;
+}
+
+/* Add a class to center text */
+/* Add a class to center text */
+.center-text {
+    text-align: center;
+    flex-grow: 1;
+    /* Expands to fill available space */
+    margin-left: -1200px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    background-color: #6d346c63;
+    color: #8220b4;
+    padding: 20px;
+    padding-bottom: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    background-color: #78653cab;
+
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style sections */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style projects in the portfolio section */
+.project {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #701b30;
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+h2 {
+    color: cyan;
+    margin-left: 47%;
+}
+
+/* Profile image for mobile */
+.profile-image {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 145px;
+}
+
+.profile-image img.profile-image-circle {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#about {
+    padding-top: 200px;
+    color: #2d6ec6;
+    text-align: left;
+    width: 90%; /* Adjust width for better mobile layout */
+    margin: 0 auto;
+}
+
+#contact {
+    color: #ffffff;
+    width: 90%; /* Adjust width for better mobile layout */
+    margin: 0 auto;
+}
+
+/* Bubble styles for mobile */
+.bubble {
+    position: relative;
+    width: 50px; /* Adjust bubble size for mobile */
+    height: 50px; /* Adjust bubble size for mobile */
+    background-color: rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+    animation: moveBubble 20s linear infinite, changeColor 2s linear infinite;
+    cursor: pointer;
+    margin: 10px; /* Adjust spacing between bubbles for mobile */
+}
+
+.bubble:nth-child(2) {
+    background-color: rgba(0, 255, 0, 0.5);
+    animation-delay: 5s;
+}
+
+.bubble:nth-child(3) {
+    background-color: rgba(255, 0, 0, 0.5);
+    animation-delay: 10s;
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Mobile menu links */
+.menu-links {
+    display: none;
+    position: absolute;
+    top: 83px;
+    right: 223px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    
+}
+
+.menu-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    background-color: #555;
+}
+
+/* Show menu links when menu icon is clicked */
+.hamburger-menu.active .menu-links {
+    display: flex;
+}
+
+/* Achievements section for mobile */
+.achievements {
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin: 5px auto;
+    font-size: 1rem;
+}
+
+/* Center text class for mobile */
+.center-text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+}
